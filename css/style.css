@@ -1,17 +1,37 @@
-p {
-  color: #000;
+* {
+  margin: 0;
+  padding: 0;
+  border-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: sans-serif;
 }
 
-h1 {
-  color: #000;
+*[data-placeholder=wrapper] {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(45deg, #000, #ddd, #eee, #eee);
+  height: 100%;
+  border-radius: 3px;
 }
 
-h2 {
-  color: #000;
+*[data-placeholder=content] {
+  opacity: 0;
+  transition: 0.4s 0 ease-out all;
 }
 
-h3 {
-  color: #000;
+*[data-placholder-status=active] {
+  background: transparent !important;
 }
+
+*[data-placholder-status=active] *[data-placeholder=content] {
+  opacity: 1;
+  color: inherit;
+}
+
+/* 
+sass --watch sass/style.scss css/style.css
+
+*/
 
 /*# sourceMappingURL=style.css.map */
