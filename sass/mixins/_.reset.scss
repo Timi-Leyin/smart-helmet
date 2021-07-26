@@ -4,5 +4,31 @@
     border-sizing:border-box;
     scroll-behavior: smooth;
     // color: white;
-    font-family: sans-serif;
+    font-family:"Open Sans", sans-serif;
+}
+
+body{
+    background: $black;
+    color: $white;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 18px;
+    @include transition();
+
+    &:hover{
+        color: $primary-color;
+    }
+}
+
+button{
+    border: none;
+    outline: none !important;
+
+    &:hover{
+        cursor: pointer;
+        box-shadow:inset 99px 99px 99px rgba(0, 0, 0, 0.11);
+    }
 }

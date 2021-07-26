@@ -1,3 +1,21 @@
-@mixin transition($duration:0.4s, $delay:0,$easing:ease-out, $property:all) {
+@mixin transition($duration:0.4s, $delay:0s, $easing:ease-out, $property:all) {
     transition: $duration $delay $easing $property;
 }
+
+@mixin flex($align:unset ,$justify:unset) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+
+@mixin position ($type, $top:0, $left:0, $right:unset, $bottom:unset) {
+  @if $type == "relative"{
+      position: $type;
+    }@else{
+      position: $type;
+      top: $top;
+      left:$left
+  }
+}
+
