@@ -4,7 +4,7 @@
     border-sizing:border-box;
     scroll-behavior: smooth;
     // color: white;
-    font-family:"Open Sans", sans-serif;
+    font-family: 'Georama', sans-serif;
 }
 
 body{
@@ -15,7 +15,7 @@ body{
 a{
     text-decoration: none;
     color: inherit;
-    font-size: 18px;
+    font-size: 14px;
     @include transition();
 
     &:hover{

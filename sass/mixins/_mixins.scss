@@ -9,13 +9,27 @@
 }
 
 
-@mixin position ($type, $top:0, $left:0, $right:unset, $bottom:unset) {
+@mixin position ($type, $top:0, $left:0, $right:0, $bottom:unset) {
   @if $type == "relative"{
       position: $type;
     }@else{
       position: $type;
       top: $top;
-      left:$left
+      left:$left;
+      $right:$right;
   }
 }
 
+
+
+%heading{
+    margin: 20px 100px;
+    h2{
+        font-size: 3rem;
+        padding: 10px 0;
+    }
+    p{
+        max-width: 500px;
+        opacity: .7;
+    }
+}

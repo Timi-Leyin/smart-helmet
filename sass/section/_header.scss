@@ -1,9 +1,11 @@
 #header{
-   @include position(relative);
+   @include position(absolute);
    @include flex(center, space-around);
    height: 100px;
    padding: 10px 0;
-   max-width: 900px;
+   z-index: 10;
+   width: 100%;
+//    max-width: 900px;
    margin: auto;
 
 
