@@ -1,0 +1,52 @@
+#collections{
+
+
+.collections{
+    @include flex(flex-start,space-between);
+    margin-bottom: 4rem;
+}
+
+.collection_text{
+    max-width: 500px;
+    margin: 0 20px;
+    >*{
+        margin: 10px 0;
+    }
+    .light-head{
+        font-size: 2.5rem;
+    }
+    a{
+        text-decoration: underline;
+        color: wheat
+    }
+}
+
+.collection_img {
+    @include position(relative);
+    margin-bottom: 4rem;
+>*{
+    width: 400px;
+    height: 500px;
+    overflow: hidden;
+    margin: 10px;
+    background-color: rgb(51, 51, 51);
+    .img{
+        width: inherit;
+        height: inherit;
+        transform: scale(1.5);
+        object-fit: cover;
+    }
+}
+
+}
+.img-container-2{
+width: 300px;
+background: wheat;
+@include position(absolute, 50%, -50%);
+height: 300px;
+}
+.collection-img-cont-right{
+    left: unset;
+    right:-50% ;
+}
+}

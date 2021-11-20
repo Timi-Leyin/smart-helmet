@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    border-sizing:border-box;
+    scroll-behavior: smooth;
+    // cursor: none !important;
+
+    // color: white;
+    font-family: 'Georama', sans-serif;
+}
+
+body{
+    background: $black;
+    color: $white;
+}
+ 
+a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 14px;
+    @include transition();
+
+    &:hover{
+        color: $primary-color;
+    }
+}
+
+button{
+    border: none;
+    outline: none !important;
+
+    &:hover{
+        cursor: pointer;
+        box-shadow:inset 99px 99px 99px rgba(0, 0, 0, 0.11);
+    }
+}
+
+.light-head{
+    font-weight: 500;
+}
+.white-space{
+    margin: 0 4px
+}
+.scroll-reveal{
+    @include position(relative);
+    .break > span{
+        opacity: 0;
+        transform: translateY(20px);
+        display: inline-block
+    }
+}

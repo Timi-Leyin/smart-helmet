@@ -1,0 +1,57 @@
+@mixin transition($duration:0.4s, $delay:0s, $easing:ease-out, $property:all) {
+    transition: $duration $delay $easing $property;
+}
+
+@mixin flex($align:unset ,$justify:unset) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+
+@mixin position ($type, $top:0, $left:0, $right:0, $bottom:unset,$center:false) {
+  @if $type == "relative"{
+      position: $type;
+    }
+    @else if $center{
+        position: $type;
+        top: 50%;
+        left: 50%;
+      transform: translate(-50%, -50%);
+
+    }
+    @else{
+      position: $type;
+      top: $top;
+      left:$left;
+      right:$right;
+  }
+}
+
+
+@mixin button {
+outline: none;
+border: none;
+
+}
+
+%heading{
+    margin: 20px 100px;
+    h2{
+        font-size: 3rem;
+        padding: 10px 0;
+    }
+    p{
+        max-width: 500px;
+        opacity: .7;
+    }
+}
+
+%head{
+    font-size: 4rem;
+}
+
+@keyframes pointer-down {
+    0%{transform: translateY(-10px);opacity: 1;}
+    100%{transform: translateY(100%); opacity: 0;}
+}

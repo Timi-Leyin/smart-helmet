@@ -1,0 +1,15 @@
+._cursor{
+    $s:30px;
+    @include position(fixed,-50%,-50%);
+    width: $s;
+    height: $s;
+    background: $white;
+    border-radius:$s ;
+    z-index: 99;
+    transition: 0.1s transform;
+    mix-blend-mode: difference;
+
+&.pointed{
+transform: scale(2);
+}
+}

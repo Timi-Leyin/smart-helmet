@@ -1,0 +1,18 @@
+/* Error: This module and the new module both define a variable named "$black".
+ *   ,
+ * 1 | @use "../mixins/index" as *;
+ *   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   style/component/_index.scss 1:1  @import
+ *   style/style.scss 7:10            root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: This module and the new module both define a variable named "$black".\a   \2577 \a 1 \2502  @use "../mixins/index" as *;\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   style/component/_index.scss 1:1  @import\a   style/style.scss 7:10            root stylesheet';
+}
